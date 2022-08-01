@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Cloudinary;
+namespace Cloudinary\MediaDelivery\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cloudinary\ApiException;
-use Cloudinary\Configuration;
-use Cloudinary\HeaderSelector;
-use Cloudinary\ObjectSerializer;
+use Cloudinary\MediaDelivery\ApiException;
+use Cloudinary\MediaDelivery\Configuration;
+use Cloudinary\MediaDelivery\HeaderSelector;
+use Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
  * MappingFunctionApi Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class MappingFunctionApi
      *
      * Create a new Mapping Function
      *
-     * @param  \Cloudinary\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MappingFunction|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MappingFunction|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function createMappingFunction($mapping_function_create_payload)
     {
@@ -137,11 +137,11 @@ class MappingFunctionApi
      *
      * Create a new Mapping Function
      *
-     * @param  \Cloudinary\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MappingFunction|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MappingFunction|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMappingFunctionWithHttpInfo($mapping_function_create_payload)
     {
@@ -184,53 +184,53 @@ class MappingFunctionApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Cloudinary\Model\MappingFunction' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MappingFunction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MappingFunction' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MappingFunction' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MappingFunction', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MappingFunction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MappingFunction';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -251,7 +251,7 @@ class MappingFunctionApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MappingFunction',
+                        '\Cloudinary\MediaDelivery\Model\MappingFunction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class MappingFunctionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class MappingFunctionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class MappingFunctionApi
      *
      * Create a new Mapping Function
      *
-     * @param  \Cloudinary\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -302,14 +302,14 @@ class MappingFunctionApi
      *
      * Create a new Mapping Function
      *
-     * @param  \Cloudinary\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createMappingFunctionAsyncWithHttpInfo($mapping_function_create_payload)
     {
-        $returnType = '\Cloudinary\Model\MappingFunction';
+        $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction';
         $request = $this->createMappingFunctionRequest($mapping_function_create_payload);
 
         return $this->client
@@ -351,7 +351,7 @@ class MappingFunctionApi
     /**
      * Create request for operation 'createMappingFunction'
      *
-     * @param  \Cloudinary\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload $mapping_function_create_payload Payload to create Mapping Function (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -454,7 +454,7 @@ class MappingFunctionApi
      *
      * @param  string $id ID of the Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -470,7 +470,7 @@ class MappingFunctionApi
      *
      * @param  string $id ID of the Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -520,7 +520,7 @@ class MappingFunctionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class MappingFunctionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -704,9 +704,9 @@ class MappingFunctionApi
      *
      * @param  string $id ID of the Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MappingFunction|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MappingFunction|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function getMappingFunction($id)
     {
@@ -721,9 +721,9 @@ class MappingFunctionApi
      *
      * @param  string $id ID of the Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MappingFunction|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MappingFunction|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMappingFunctionWithHttpInfo($id)
     {
@@ -766,53 +766,53 @@ class MappingFunctionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MappingFunction' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MappingFunction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MappingFunction' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MappingFunction' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MappingFunction', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MappingFunction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MappingFunction';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -833,7 +833,7 @@ class MappingFunctionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MappingFunction',
+                        '\Cloudinary\MediaDelivery\Model\MappingFunction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -841,7 +841,7 @@ class MappingFunctionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -849,7 +849,7 @@ class MappingFunctionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -891,7 +891,7 @@ class MappingFunctionApi
      */
     public function getMappingFunctionAsyncWithHttpInfo($id)
     {
-        $returnType = '\Cloudinary\Model\MappingFunction';
+        $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction';
         $request = $this->getMappingFunctionRequest($id);
 
         return $this->client
@@ -1037,9 +1037,9 @@ class MappingFunctionApi
      * Get the Mapping Functions
      *
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MappingFunction[]|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MappingFunction[]|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function getMappingFunctions()
     {
@@ -1053,9 +1053,9 @@ class MappingFunctionApi
      * Get the Mapping Functions
      *
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MappingFunction[]|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MappingFunction[]|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMappingFunctionsWithHttpInfo()
     {
@@ -1098,38 +1098,38 @@ class MappingFunctionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MappingFunction[]' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MappingFunction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MappingFunction[]' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MappingFunction[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MappingFunction[]', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MappingFunction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MappingFunction[]';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1150,7 +1150,7 @@ class MappingFunctionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MappingFunction[]',
+                        '\Cloudinary\MediaDelivery\Model\MappingFunction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1158,7 +1158,7 @@ class MappingFunctionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1198,7 +1198,7 @@ class MappingFunctionApi
      */
     public function getMappingFunctionsAsyncWithHttpInfo()
     {
-        $returnType = '\Cloudinary\Model\MappingFunction[]';
+        $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction[]';
         $request = $this->getMappingFunctionsRequest();
 
         return $this->client
@@ -1329,11 +1329,11 @@ class MappingFunctionApi
      * Update the Mapping Function
      *
      * @param  string $id ID of the Mapping Function (required)
-     * @param  \Cloudinary\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MappingFunction|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MappingFunction|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function updateMappingFunction($id, $mapping_function_update_payload)
     {
@@ -1347,11 +1347,11 @@ class MappingFunctionApi
      * Update the Mapping Function
      *
      * @param  string $id ID of the Mapping Function (required)
-     * @param  \Cloudinary\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MappingFunction|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MappingFunction|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMappingFunctionWithHttpInfo($id, $mapping_function_update_payload)
     {
@@ -1394,68 +1394,68 @@ class MappingFunctionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MappingFunction' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MappingFunction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MappingFunction' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MappingFunction' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MappingFunction', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MappingFunction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MappingFunction';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1476,7 +1476,7 @@ class MappingFunctionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MappingFunction',
+                        '\Cloudinary\MediaDelivery\Model\MappingFunction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1484,7 +1484,7 @@ class MappingFunctionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1492,7 +1492,7 @@ class MappingFunctionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1500,7 +1500,7 @@ class MappingFunctionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1516,7 +1516,7 @@ class MappingFunctionApi
      * Update the Mapping Function
      *
      * @param  string $id ID of the Mapping Function (required)
-     * @param  \Cloudinary\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1537,14 +1537,14 @@ class MappingFunctionApi
      * Update the Mapping Function
      *
      * @param  string $id ID of the Mapping Function (required)
-     * @param  \Cloudinary\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateMappingFunctionAsyncWithHttpInfo($id, $mapping_function_update_payload)
     {
-        $returnType = '\Cloudinary\Model\MappingFunction';
+        $returnType = '\Cloudinary\MediaDelivery\Model\MappingFunction';
         $request = $this->updateMappingFunctionRequest($id, $mapping_function_update_payload);
 
         return $this->client
@@ -1587,7 +1587,7 @@ class MappingFunctionApi
      * Create request for operation 'updateMappingFunction'
      *
      * @param  string $id ID of the Mapping Function (required)
-     * @param  \Cloudinary\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload $mapping_function_update_payload Payload to update the Mapping Function (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

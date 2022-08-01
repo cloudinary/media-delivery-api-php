@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Model;
+namespace Cloudinary\MediaDelivery\Model;
 
 use \ArrayAccess;
-use \Cloudinary\ObjectSerializer;
+use \Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
  * MediaTarget Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MediaTarget implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'display_name' => 'string',
         'source_type' => 'string',
-        'config' => '\Cloudinary\Model\MediaTargetConfig',
+        'config' => '\Cloudinary\MediaDelivery\Model\MediaTargetConfig',
         'id' => 'string'
     ];
 
@@ -317,7 +317,7 @@ class MediaTarget implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets config
      *
-     * @return \Cloudinary\Model\MediaTargetConfig|null
+     * @return \Cloudinary\MediaDelivery\Model\MediaTargetConfig|null
      */
     public function getConfig()
     {
@@ -327,7 +327,7 @@ class MediaTarget implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets config
      *
-     * @param \Cloudinary\Model\MediaTargetConfig|null $config config
+     * @param \Cloudinary\MediaDelivery\Model\MediaTargetConfig|null $config config
      *
      * @return self
      */

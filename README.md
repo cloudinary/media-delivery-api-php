@@ -43,21 +43,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$apiInstance = new Cloudinary\MediaDelivery\Api\CacheApi(null, $config);
 
-
-$apiInstance = new Cloudinary\Api\CacheApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$cache_invalidate_request_payload = new \Cloudinary\Model\CacheInvalidateRequestPayload(); // \Cloudinary\Model\CacheInvalidateRequestPayload | Payload to invalidate the cache
+$cache_invalidate_request_payload = new \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload(); // \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload | Payload to invalidate the cache
 
 try {
     $apiInstance->invalidate($cache_invalidate_request_payload);

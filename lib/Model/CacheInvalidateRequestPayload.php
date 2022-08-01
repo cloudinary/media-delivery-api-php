@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Model;
+namespace Cloudinary\MediaDelivery\Model;
 
 use \ArrayAccess;
-use \Cloudinary\ObjectSerializer;
+use \Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
  * CacheInvalidateRequestPayload Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class CacheInvalidateRequestPayload implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'urls' => 'string[]',
-        'assets' => '\Cloudinary\Model\CacheInvalidateAsset[]',
-        'media_resources' => '\Cloudinary\Model\CacheInvalidateMediaResource[]'
+        'assets' => '\Cloudinary\MediaDelivery\Model\CacheInvalidateAsset[]',
+        'media_resources' => '\Cloudinary\MediaDelivery\Model\CacheInvalidateMediaResource[]'
     ];
 
     /**
@@ -242,7 +242,7 @@ class CacheInvalidateRequestPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets assets
      *
-     * @return \Cloudinary\Model\CacheInvalidateAsset[]|null
+     * @return \Cloudinary\MediaDelivery\Model\CacheInvalidateAsset[]|null
      */
     public function getAssets()
     {
@@ -252,7 +252,7 @@ class CacheInvalidateRequestPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets assets
      *
-     * @param \Cloudinary\Model\CacheInvalidateAsset[]|null $assets An array of up to 20 media resources to invalidate.
+     * @param \Cloudinary\MediaDelivery\Model\CacheInvalidateAsset[]|null $assets An array of up to 20 media resources to invalidate.
      *
      * @return self
      */
@@ -266,7 +266,7 @@ class CacheInvalidateRequestPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets media_resources
      *
-     * @return \Cloudinary\Model\CacheInvalidateMediaResource[]|null
+     * @return \Cloudinary\MediaDelivery\Model\CacheInvalidateMediaResource[]|null
      * @deprecated
      */
     public function getMediaResources()
@@ -277,7 +277,7 @@ class CacheInvalidateRequestPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets media_resources
      *
-     * @param \Cloudinary\Model\CacheInvalidateMediaResource[]|null $media_resources media_resources
+     * @param \Cloudinary\MediaDelivery\Model\CacheInvalidateMediaResource[]|null $media_resources media_resources
      *
      * @return self
      * @deprecated

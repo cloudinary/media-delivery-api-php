@@ -1,4 +1,4 @@
-# Cloudinary\MappingFunctionApi
+# Cloudinary\MediaDelivery\MappingFunctionApi
 
 All URIs are relative to https://api.cloudinary.com/v2/demo.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `createMappingFunction()`
 
 ```php
-createMappingFunction($mapping_function_create_payload): \Cloudinary\Model\MappingFunction
+createMappingFunction($mapping_function_create_payload): \Cloudinary\MediaDelivery\Model\MappingFunction
 ```
 
 Create a new Mapping Function
@@ -26,21 +26,15 @@ Create a new Mapping Function
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MappingFunctionApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$mapping_function_create_payload = new \Cloudinary\Model\MappingFunctionCreatePayload(); // \Cloudinary\Model\MappingFunctionCreatePayload | Payload to create Mapping Function
+$apiInstance = new Cloudinary\MediaDelivery\Api\MappingFunctionApi(null, $config);
+
+$mapping_function_create_payload = new \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload(); // \Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload | Payload to create Mapping Function
 
 try {
     $result = $apiInstance->createMappingFunction($mapping_function_create_payload);
@@ -54,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mapping_function_create_payload** | [**\Cloudinary\Model\MappingFunctionCreatePayload**](../Model/MappingFunctionCreatePayload.md)| Payload to create Mapping Function |
+ **mapping_function_create_payload** | [**\Cloudinary\MediaDelivery\Model\MappingFunctionCreatePayload**](../Model/MappingFunctionCreatePayload.md)| Payload to create Mapping Function |
 
 ### Return type
 
-[**\Cloudinary\Model\MappingFunction**](../Model/MappingFunction.md)
+[**\Cloudinary\MediaDelivery\Model\MappingFunction**](../Model/MappingFunction.md)
 
 ### Authorization
 
@@ -88,20 +82,14 @@ Delete the Mapping Function
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MappingFunctionApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MappingFunctionApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Mapping Function
 
 try {
@@ -137,7 +125,7 @@ void (empty response body)
 ## `getMappingFunction()`
 
 ```php
-getMappingFunction($id): \Cloudinary\Model\MappingFunction
+getMappingFunction($id): \Cloudinary\MediaDelivery\Model\MappingFunction
 ```
 
 Get the Mapping Function
@@ -149,20 +137,14 @@ Get the Mapping Function
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MappingFunctionApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MappingFunctionApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Mapping Function
 
 try {
@@ -181,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Cloudinary\Model\MappingFunction**](../Model/MappingFunction.md)
+[**\Cloudinary\MediaDelivery\Model\MappingFunction**](../Model/MappingFunction.md)
 
 ### Authorization
 
@@ -199,7 +181,7 @@ Name | Type | Description  | Notes
 ## `getMappingFunctions()`
 
 ```php
-getMappingFunctions(): \Cloudinary\Model\MappingFunction[]
+getMappingFunctions(): \Cloudinary\MediaDelivery\Model\MappingFunction[]
 ```
 
 Get the Mapping Functions
@@ -211,20 +193,14 @@ Get the Mapping Functions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MappingFunctionApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MappingFunctionApi(null, $config);
+
 
 try {
     $result = $apiInstance->getMappingFunctions();
@@ -240,7 +216,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Cloudinary\Model\MappingFunction[]**](../Model/MappingFunction.md)
+[**\Cloudinary\MediaDelivery\Model\MappingFunction[]**](../Model/MappingFunction.md)
 
 ### Authorization
 
@@ -258,7 +234,7 @@ This endpoint does not need any parameter.
 ## `updateMappingFunction()`
 
 ```php
-updateMappingFunction($id, $mapping_function_update_payload): \Cloudinary\Model\MappingFunction
+updateMappingFunction($id, $mapping_function_update_payload): \Cloudinary\MediaDelivery\Model\MappingFunction
 ```
 
 Update the Mapping Function
@@ -270,22 +246,16 @@ Update the Mapping Function
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MappingFunctionApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MappingFunctionApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Mapping Function
-$mapping_function_update_payload = new \Cloudinary\Model\MappingFunctionUpdatePayload(); // \Cloudinary\Model\MappingFunctionUpdatePayload | Payload to update the Mapping Function
+$mapping_function_update_payload = new \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload(); // \Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload | Payload to update the Mapping Function
 
 try {
     $result = $apiInstance->updateMappingFunction($id, $mapping_function_update_payload);
@@ -300,11 +270,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the Mapping Function |
- **mapping_function_update_payload** | [**\Cloudinary\Model\MappingFunctionUpdatePayload**](../Model/MappingFunctionUpdatePayload.md)| Payload to update the Mapping Function |
+ **mapping_function_update_payload** | [**\Cloudinary\MediaDelivery\Model\MappingFunctionUpdatePayload**](../Model/MappingFunctionUpdatePayload.md)| Payload to update the Mapping Function |
 
 ### Return type
 
-[**\Cloudinary\Model\MappingFunction**](../Model/MappingFunction.md)
+[**\Cloudinary\MediaDelivery\Model\MappingFunction**](../Model/MappingFunction.md)
 
 ### Authorization
 

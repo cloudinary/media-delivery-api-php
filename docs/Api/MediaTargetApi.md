@@ -1,4 +1,4 @@
-# Cloudinary\MediaTargetApi
+# Cloudinary\MediaDelivery\MediaTargetApi
 
 All URIs are relative to https://api.cloudinary.com/v2/demo.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `createMediaTarget()`
 
 ```php
-createMediaTarget($media_target_create_payload): \Cloudinary\Model\MediaTarget
+createMediaTarget($media_target_create_payload): \Cloudinary\MediaDelivery\Model\MediaTarget
 ```
 
 Create a new Media Target
@@ -26,21 +26,15 @@ Create a new Media Target
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MediaTargetApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$media_target_create_payload = {"display_name":"my_media_target","source_type":"s3","config":{"s3_bucket_name":"my_bucket","s3_bucket_folder":"my_bucket_folder","s3_access_key":"123456789","s3_secret_key":"123456789","s3_uri_template":"s3://mybucket/images/{{vars.signature}}/{{fwd_key}}"}}; // \Cloudinary\Model\MediaTargetCreatePayload | Payload to create Media Target
+$apiInstance = new Cloudinary\MediaDelivery\Api\MediaTargetApi(null, $config);
+
+$media_target_create_payload = {"display_name":"my_media_target","source_type":"s3","config":{"s3_bucket_name":"my_bucket","s3_bucket_folder":"my_bucket_folder","s3_access_key":"123456789","s3_secret_key":"123456789","s3_uri_template":"s3://mybucket/images/{{vars.signature}}/{{fwd_key}}"}}; // \Cloudinary\MediaDelivery\Model\MediaTargetCreatePayload | Payload to create Media Target
 
 try {
     $result = $apiInstance->createMediaTarget($media_target_create_payload);
@@ -54,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **media_target_create_payload** | [**\Cloudinary\Model\MediaTargetCreatePayload**](../Model/MediaTargetCreatePayload.md)| Payload to create Media Target |
+ **media_target_create_payload** | [**\Cloudinary\MediaDelivery\Model\MediaTargetCreatePayload**](../Model/MediaTargetCreatePayload.md)| Payload to create Media Target |
 
 ### Return type
 
-[**\Cloudinary\Model\MediaTarget**](../Model/MediaTarget.md)
+[**\Cloudinary\MediaDelivery\Model\MediaTarget**](../Model/MediaTarget.md)
 
 ### Authorization
 
@@ -76,7 +70,7 @@ Name | Type | Description  | Notes
 ## `deleteMediaTarget()`
 
 ```php
-deleteMediaTarget($id): \Cloudinary\Model\MessageResponse
+deleteMediaTarget($id): \Cloudinary\MediaDelivery\Model\MessageResponse
 ```
 
 Delete the Media Target
@@ -88,20 +82,14 @@ Delete the Media Target
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MediaTargetApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MediaTargetApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Media Target
 
 try {
@@ -120,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Cloudinary\Model\MessageResponse**](../Model/MessageResponse.md)
+[**\Cloudinary\MediaDelivery\Model\MessageResponse**](../Model/MessageResponse.md)
 
 ### Authorization
 
@@ -138,7 +126,7 @@ Name | Type | Description  | Notes
 ## `getMediaTarget()`
 
 ```php
-getMediaTarget($id): \Cloudinary\Model\MediaTarget
+getMediaTarget($id): \Cloudinary\MediaDelivery\Model\MediaTarget
 ```
 
 Get the Media Target
@@ -150,20 +138,14 @@ Get the Media Target
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MediaTargetApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MediaTargetApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Media Target
 
 try {
@@ -182,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Cloudinary\Model\MediaTarget**](../Model/MediaTarget.md)
+[**\Cloudinary\MediaDelivery\Model\MediaTarget**](../Model/MediaTarget.md)
 
 ### Authorization
 
@@ -200,7 +182,7 @@ Name | Type | Description  | Notes
 ## `getMediaTargets()`
 
 ```php
-getMediaTargets(): \Cloudinary\Model\MediaTarget[]
+getMediaTargets(): \Cloudinary\MediaDelivery\Model\MediaTarget[]
 ```
 
 Get the Media Targets
@@ -212,20 +194,14 @@ Get the Media Targets
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MediaTargetApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MediaTargetApi(null, $config);
+
 
 try {
     $result = $apiInstance->getMediaTargets();
@@ -241,7 +217,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Cloudinary\Model\MediaTarget[]**](../Model/MediaTarget.md)
+[**\Cloudinary\MediaDelivery\Model\MediaTarget[]**](../Model/MediaTarget.md)
 
 ### Authorization
 
@@ -259,7 +235,7 @@ This endpoint does not need any parameter.
 ## `updateMediaTarget()`
 
 ```php
-updateMediaTarget($id, $media_target_update_payload): \Cloudinary\Model\MediaTarget
+updateMediaTarget($id, $media_target_update_payload): \Cloudinary\MediaDelivery\Model\MediaTarget
 ```
 
 Update the Media Target
@@ -271,22 +247,16 @@ Update the Media Target
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\MediaTargetApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\MediaTargetApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Media Target
-$media_target_update_payload = new \Cloudinary\Model\MediaTargetUpdatePayload(); // \Cloudinary\Model\MediaTargetUpdatePayload | Payload to update the Media Target
+$media_target_update_payload = new \Cloudinary\MediaDelivery\Model\MediaTargetUpdatePayload(); // \Cloudinary\MediaDelivery\Model\MediaTargetUpdatePayload | Payload to update the Media Target
 
 try {
     $result = $apiInstance->updateMediaTarget($id, $media_target_update_payload);
@@ -301,11 +271,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the Media Target |
- **media_target_update_payload** | [**\Cloudinary\Model\MediaTargetUpdatePayload**](../Model/MediaTargetUpdatePayload.md)| Payload to update the Media Target |
+ **media_target_update_payload** | [**\Cloudinary\MediaDelivery\Model\MediaTargetUpdatePayload**](../Model/MediaTargetUpdatePayload.md)| Payload to update the Media Target |
 
 ### Return type
 
-[**\Cloudinary\Model\MediaTarget**](../Model/MediaTarget.md)
+[**\Cloudinary\MediaDelivery\Model\MediaTarget**](../Model/MediaTarget.md)
 
 ### Authorization
 

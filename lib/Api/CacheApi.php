@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Cloudinary;
+namespace Cloudinary\MediaDelivery\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cloudinary\ApiException;
-use Cloudinary\Configuration;
-use Cloudinary\HeaderSelector;
-use Cloudinary\ObjectSerializer;
+use Cloudinary\MediaDelivery\ApiException;
+use Cloudinary\MediaDelivery\Configuration;
+use Cloudinary\MediaDelivery\HeaderSelector;
+use Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
  * CacheApi Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,9 +120,9 @@ class CacheApi
      *
      * Invalidate the cache
      *
-     * @param  \Cloudinary\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -136,9 +136,9 @@ class CacheApi
      *
      * Invalidate the cache
      *
-     * @param  \Cloudinary\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -188,7 +188,7 @@ class CacheApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -196,7 +196,7 @@ class CacheApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class CacheApi
      *
      * Invalidate the cache
      *
-     * @param  \Cloudinary\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -231,7 +231,7 @@ class CacheApi
      *
      * Invalidate the cache
      *
-     * @param  \Cloudinary\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -267,7 +267,7 @@ class CacheApi
     /**
      * Create request for operation 'invalidate'
      *
-     * @param  \Cloudinary\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload $cache_invalidate_request_payload Payload to invalidate the cache (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -368,11 +368,11 @@ class CacheApi
      *
      * Warm up the cache
      *
-     * @param  \Cloudinary\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\CacheWarmupSuccessResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function warmup($cache_warmup_request_payload)
     {
@@ -385,11 +385,11 @@ class CacheApi
      *
      * Warm up the cache
      *
-     * @param  \Cloudinary\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\CacheWarmupSuccessResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function warmupWithHttpInfo($cache_warmup_request_payload)
     {
@@ -432,53 +432,53 @@ class CacheApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\CacheWarmupSuccessResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\CacheWarmupSuccessResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\CacheWarmupSuccessResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\CacheWarmupSuccessResponse';
+            $returnType = '\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -499,7 +499,7 @@ class CacheApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\CacheWarmupSuccessResponse',
+                        '\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -507,7 +507,7 @@ class CacheApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class CacheApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class CacheApi
      *
      * Warm up the cache
      *
-     * @param  \Cloudinary\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -550,14 +550,14 @@ class CacheApi
      *
      * Warm up the cache
      *
-     * @param  \Cloudinary\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function warmupAsyncWithHttpInfo($cache_warmup_request_payload)
     {
-        $returnType = '\Cloudinary\Model\CacheWarmupSuccessResponse';
+        $returnType = '\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse';
         $request = $this->warmupRequest($cache_warmup_request_payload);
 
         return $this->client
@@ -599,7 +599,7 @@ class CacheApi
     /**
      * Create request for operation 'warmup'
      *
-     * @param  \Cloudinary\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
+     * @param  \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload $cache_warmup_request_payload Payload to warm up the cache (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

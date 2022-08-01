@@ -1,4 +1,4 @@
-# Cloudinary\CacheApi
+# Cloudinary\MediaDelivery\CacheApi
 
 All URIs are relative to https://api.cloudinary.com/v2/demo.
 
@@ -23,21 +23,15 @@ Invalidate the cache
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\CacheApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$cache_invalidate_request_payload = new \Cloudinary\Model\CacheInvalidateRequestPayload(); // \Cloudinary\Model\CacheInvalidateRequestPayload | Payload to invalidate the cache
+$apiInstance = new Cloudinary\MediaDelivery\Api\CacheApi(null, $config);
+
+$cache_invalidate_request_payload = new \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload(); // \Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload | Payload to invalidate the cache
 
 try {
     $apiInstance->invalidate($cache_invalidate_request_payload);
@@ -50,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cache_invalidate_request_payload** | [**\Cloudinary\Model\CacheInvalidateRequestPayload**](../Model/CacheInvalidateRequestPayload.md)| Payload to invalidate the cache |
+ **cache_invalidate_request_payload** | [**\Cloudinary\MediaDelivery\Model\CacheInvalidateRequestPayload**](../Model/CacheInvalidateRequestPayload.md)| Payload to invalidate the cache |
 
 ### Return type
 
@@ -72,7 +66,7 @@ void (empty response body)
 ## `warmup()`
 
 ```php
-warmup($cache_warmup_request_payload): \Cloudinary\Model\CacheWarmupSuccessResponse
+warmup($cache_warmup_request_payload): \Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse
 ```
 
 Warm up the cache
@@ -84,21 +78,15 @@ Warm up the cache
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\CacheApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$cache_warmup_request_payload = new \Cloudinary\Model\CacheWarmupRequestPayload(); // \Cloudinary\Model\CacheWarmupRequestPayload | Payload to warm up the cache
+$apiInstance = new Cloudinary\MediaDelivery\Api\CacheApi(null, $config);
+
+$cache_warmup_request_payload = new \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload(); // \Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload | Payload to warm up the cache
 
 try {
     $result = $apiInstance->warmup($cache_warmup_request_payload);
@@ -112,11 +100,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cache_warmup_request_payload** | [**\Cloudinary\Model\CacheWarmupRequestPayload**](../Model/CacheWarmupRequestPayload.md)| Payload to warm up the cache |
+ **cache_warmup_request_payload** | [**\Cloudinary\MediaDelivery\Model\CacheWarmupRequestPayload**](../Model/CacheWarmupRequestPayload.md)| Payload to warm up the cache |
 
 ### Return type
 
-[**\Cloudinary\Model\CacheWarmupSuccessResponse**](../Model/CacheWarmupSuccessResponse.md)
+[**\Cloudinary\MediaDelivery\Model\CacheWarmupSuccessResponse**](../Model/CacheWarmupSuccessResponse.md)
 
 ### Authorization
 

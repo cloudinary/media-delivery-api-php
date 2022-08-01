@@ -3,7 +3,7 @@
  * Configuration
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   Cloudinary
  * @link     https://cloudinary.com
  */
@@ -23,13 +23,13 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary;
+namespace Cloudinary\MediaDelivery;
 
 /**
  * Configuration Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   Cloudinary
  * @link     https://cloudinary.com
  */
@@ -514,7 +514,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Cloudinary) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Cloudinary\MediaDelivery) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 0.1.0-beta' . PHP_EOL;

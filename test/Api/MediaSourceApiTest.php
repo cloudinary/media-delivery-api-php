@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Cloudinary\Test\Api;
+namespace Cloudinary\MediaDelivery\Test\Api;
 
-use \Cloudinary\Configuration;
-use \Cloudinary\ApiException;
-use \Cloudinary\ObjectSerializer;
+use \Cloudinary\MediaDelivery\Configuration;
+use \Cloudinary\MediaDelivery\ApiException;
+use \Cloudinary\MediaDelivery\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * MediaSourceApiTest Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

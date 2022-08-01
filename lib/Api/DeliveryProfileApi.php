@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Cloudinary;
+namespace Cloudinary\MediaDelivery\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cloudinary\ApiException;
-use Cloudinary\Configuration;
-use Cloudinary\HeaderSelector;
-use Cloudinary\ObjectSerializer;
+use Cloudinary\MediaDelivery\ApiException;
+use Cloudinary\MediaDelivery\Configuration;
+use Cloudinary\MediaDelivery\HeaderSelector;
+use Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
  * DeliveryProfileApi Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class DeliveryProfileApi
      *
      * Create a new Delivery Profile
      *
-     * @param  \Cloudinary\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\DeliveryProfile|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\DeliveryProfile|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function createDeliveryProfile($delivery_profile_create_payload)
     {
@@ -137,11 +137,11 @@ class DeliveryProfileApi
      *
      * Create a new Delivery Profile
      *
-     * @param  \Cloudinary\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\DeliveryProfile|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\DeliveryProfile|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDeliveryProfileWithHttpInfo($delivery_profile_create_payload)
     {
@@ -184,53 +184,53 @@ class DeliveryProfileApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Cloudinary\Model\DeliveryProfile' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\DeliveryProfile' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\DeliveryProfile', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\DeliveryProfile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\DeliveryProfile';
+            $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -251,7 +251,7 @@ class DeliveryProfileApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\DeliveryProfile',
+                        '\Cloudinary\MediaDelivery\Model\DeliveryProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class DeliveryProfileApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class DeliveryProfileApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class DeliveryProfileApi
      *
      * Create a new Delivery Profile
      *
-     * @param  \Cloudinary\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -302,14 +302,14 @@ class DeliveryProfileApi
      *
      * Create a new Delivery Profile
      *
-     * @param  \Cloudinary\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createDeliveryProfileAsyncWithHttpInfo($delivery_profile_create_payload)
     {
-        $returnType = '\Cloudinary\Model\DeliveryProfile';
+        $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile';
         $request = $this->createDeliveryProfileRequest($delivery_profile_create_payload);
 
         return $this->client
@@ -351,7 +351,7 @@ class DeliveryProfileApi
     /**
      * Create request for operation 'createDeliveryProfile'
      *
-     * @param  \Cloudinary\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload $delivery_profile_create_payload Payload to create Delivery Profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -454,7 +454,7 @@ class DeliveryProfileApi
      *
      * @param  string $id ID of the Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -470,7 +470,7 @@ class DeliveryProfileApi
      *
      * @param  string $id ID of the Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -520,7 +520,7 @@ class DeliveryProfileApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class DeliveryProfileApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -704,9 +704,9 @@ class DeliveryProfileApi
      *
      * @param  string $id ID of the Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\DeliveryProfile|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\DeliveryProfile|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function getDeliveryProfile($id)
     {
@@ -721,9 +721,9 @@ class DeliveryProfileApi
      *
      * @param  string $id ID of the Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\DeliveryProfile|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\DeliveryProfile|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDeliveryProfileWithHttpInfo($id)
     {
@@ -766,53 +766,53 @@ class DeliveryProfileApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\DeliveryProfile' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\DeliveryProfile' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\DeliveryProfile', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\DeliveryProfile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\DeliveryProfile';
+            $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -833,7 +833,7 @@ class DeliveryProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\DeliveryProfile',
+                        '\Cloudinary\MediaDelivery\Model\DeliveryProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -841,7 +841,7 @@ class DeliveryProfileApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -849,7 +849,7 @@ class DeliveryProfileApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -891,7 +891,7 @@ class DeliveryProfileApi
      */
     public function getDeliveryProfileAsyncWithHttpInfo($id)
     {
-        $returnType = '\Cloudinary\Model\DeliveryProfile';
+        $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile';
         $request = $this->getDeliveryProfileRequest($id);
 
         return $this->client
@@ -1037,9 +1037,9 @@ class DeliveryProfileApi
      * Get the Delivery Profiles
      *
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\DeliveryProfile[]|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\DeliveryProfile[]|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function getDeliveryProfiles()
     {
@@ -1053,9 +1053,9 @@ class DeliveryProfileApi
      * Get the Delivery Profiles
      *
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\DeliveryProfile[]|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\DeliveryProfile[]|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDeliveryProfilesWithHttpInfo()
     {
@@ -1098,38 +1098,38 @@ class DeliveryProfileApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\DeliveryProfile[]' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\DeliveryProfile[]' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\DeliveryProfile[]', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\DeliveryProfile[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\DeliveryProfile[]';
+            $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1150,7 +1150,7 @@ class DeliveryProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\DeliveryProfile[]',
+                        '\Cloudinary\MediaDelivery\Model\DeliveryProfile[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1158,7 +1158,7 @@ class DeliveryProfileApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1198,7 +1198,7 @@ class DeliveryProfileApi
      */
     public function getDeliveryProfilesAsyncWithHttpInfo()
     {
-        $returnType = '\Cloudinary\Model\DeliveryProfile[]';
+        $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile[]';
         $request = $this->getDeliveryProfilesRequest();
 
         return $this->client
@@ -1329,11 +1329,11 @@ class DeliveryProfileApi
      * Update the Delivery Profile
      *
      * @param  string $id ID of the Delivery Profile (required)
-     * @param  \Cloudinary\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\DeliveryProfile|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\DeliveryProfile|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
     public function updateDeliveryProfile($id, $delivery_profile_update_payload)
     {
@@ -1347,11 +1347,11 @@ class DeliveryProfileApi
      * Update the Delivery Profile
      *
      * @param  string $id ID of the Delivery Profile (required)
-     * @param  \Cloudinary\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\DeliveryProfile|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\DeliveryProfile|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDeliveryProfileWithHttpInfo($id, $delivery_profile_update_payload)
     {
@@ -1394,68 +1394,68 @@ class DeliveryProfileApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\DeliveryProfile' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\DeliveryProfile' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\DeliveryProfile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\DeliveryProfile', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\DeliveryProfile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\DeliveryProfile';
+            $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1476,7 +1476,7 @@ class DeliveryProfileApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\DeliveryProfile',
+                        '\Cloudinary\MediaDelivery\Model\DeliveryProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1484,7 +1484,7 @@ class DeliveryProfileApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1492,7 +1492,7 @@ class DeliveryProfileApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1500,7 +1500,7 @@ class DeliveryProfileApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1516,7 +1516,7 @@ class DeliveryProfileApi
      * Update the Delivery Profile
      *
      * @param  string $id ID of the Delivery Profile (required)
-     * @param  \Cloudinary\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1537,14 +1537,14 @@ class DeliveryProfileApi
      * Update the Delivery Profile
      *
      * @param  string $id ID of the Delivery Profile (required)
-     * @param  \Cloudinary\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateDeliveryProfileAsyncWithHttpInfo($id, $delivery_profile_update_payload)
     {
-        $returnType = '\Cloudinary\Model\DeliveryProfile';
+        $returnType = '\Cloudinary\MediaDelivery\Model\DeliveryProfile';
         $request = $this->updateDeliveryProfileRequest($id, $delivery_profile_update_payload);
 
         return $this->client
@@ -1587,7 +1587,7 @@ class DeliveryProfileApi
      * Create request for operation 'updateDeliveryProfile'
      *
      * @param  string $id ID of the Delivery Profile (required)
-     * @param  \Cloudinary\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
+     * @param  \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload $delivery_profile_update_payload Payload to update the Delivery Profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

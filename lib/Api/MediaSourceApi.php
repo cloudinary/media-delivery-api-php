@@ -1,10 +1,10 @@
 <?php
 /**
- * MediaTargetApi
+ * MediaSourceApi
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Cloudinary;
+namespace Cloudinary\MediaDelivery\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,20 +34,20 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cloudinary\ApiException;
-use Cloudinary\Configuration;
-use Cloudinary\HeaderSelector;
-use Cloudinary\ObjectSerializer;
+use Cloudinary\MediaDelivery\ApiException;
+use Cloudinary\MediaDelivery\Configuration;
+use Cloudinary\MediaDelivery\HeaderSelector;
+use Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
- * MediaTargetApi Class Doc Comment
+ * MediaSourceApi Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MediaTargetApi
+class MediaSourceApi
 {
     /**
      * @var ClientInterface
@@ -116,36 +116,36 @@ class MediaTargetApi
     }
 
     /**
-     * Operation createMediaTarget
+     * Operation createMediaSource
      *
-     * Create a new Media Target
+     * Create a new Media Source
      *
-     * @param  \Cloudinary\Model\MediaTargetCreatePayload $media_target_create_payload Payload to create Media Target (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceCreatePayload $media_source_create_payload Payload to create Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MediaTarget|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MediaSource|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
-    public function createMediaTarget($media_target_create_payload)
+    public function createMediaSource($media_source_create_payload)
     {
-        list($response) = $this->createMediaTargetWithHttpInfo($media_target_create_payload);
+        list($response) = $this->createMediaSourceWithHttpInfo($media_source_create_payload);
         return $response;
     }
 
     /**
-     * Operation createMediaTargetWithHttpInfo
+     * Operation createMediaSourceWithHttpInfo
      *
-     * Create a new Media Target
+     * Create a new Media Source
      *
-     * @param  \Cloudinary\Model\MediaTargetCreatePayload $media_target_create_payload Payload to create Media Target (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceCreatePayload $media_source_create_payload Payload to create Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MediaTarget|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MediaSource|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createMediaTargetWithHttpInfo($media_target_create_payload)
+    public function createMediaSourceWithHttpInfo($media_source_create_payload)
     {
-        $request = $this->createMediaTargetRequest($media_target_create_payload);
+        $request = $this->createMediaSourceRequest($media_source_create_payload);
 
         try {
             $options = $this->createHttpClientOption();
@@ -184,53 +184,53 @@ class MediaTargetApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Cloudinary\Model\MediaTarget' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MediaSource' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MediaTarget' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MediaSource' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MediaTarget', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MediaSource', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MediaTarget';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -251,7 +251,7 @@ class MediaTargetApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MediaTarget',
+                        '\Cloudinary\MediaDelivery\Model\MediaSource',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class MediaTargetApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class MediaTargetApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -278,18 +278,18 @@ class MediaTargetApi
     }
 
     /**
-     * Operation createMediaTargetAsync
+     * Operation createMediaSourceAsync
      *
-     * Create a new Media Target
+     * Create a new Media Source
      *
-     * @param  \Cloudinary\Model\MediaTargetCreatePayload $media_target_create_payload Payload to create Media Target (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceCreatePayload $media_source_create_payload Payload to create Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMediaTargetAsync($media_target_create_payload)
+    public function createMediaSourceAsync($media_source_create_payload)
     {
-        return $this->createMediaTargetAsyncWithHttpInfo($media_target_create_payload)
+        return $this->createMediaSourceAsyncWithHttpInfo($media_source_create_payload)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -298,19 +298,19 @@ class MediaTargetApi
     }
 
     /**
-     * Operation createMediaTargetAsyncWithHttpInfo
+     * Operation createMediaSourceAsyncWithHttpInfo
      *
-     * Create a new Media Target
+     * Create a new Media Source
      *
-     * @param  \Cloudinary\Model\MediaTargetCreatePayload $media_target_create_payload Payload to create Media Target (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceCreatePayload $media_source_create_payload Payload to create Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMediaTargetAsyncWithHttpInfo($media_target_create_payload)
+    public function createMediaSourceAsyncWithHttpInfo($media_source_create_payload)
     {
-        $returnType = '\Cloudinary\Model\MediaTarget';
-        $request = $this->createMediaTargetRequest($media_target_create_payload);
+        $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource';
+        $request = $this->createMediaSourceRequest($media_source_create_payload);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -349,23 +349,23 @@ class MediaTargetApi
     }
 
     /**
-     * Create request for operation 'createMediaTarget'
+     * Create request for operation 'createMediaSource'
      *
-     * @param  \Cloudinary\Model\MediaTargetCreatePayload $media_target_create_payload Payload to create Media Target (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceCreatePayload $media_source_create_payload Payload to create Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createMediaTargetRequest($media_target_create_payload)
+    public function createMediaSourceRequest($media_source_create_payload)
     {
-        // verify the required parameter 'media_target_create_payload' is set
-        if ($media_target_create_payload === null || (is_array($media_target_create_payload) && count($media_target_create_payload) === 0)) {
+        // verify the required parameter 'media_source_create_payload' is set
+        if ($media_source_create_payload === null || (is_array($media_source_create_payload) && count($media_source_create_payload) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $media_target_create_payload when calling createMediaTarget'
+                'Missing the required parameter $media_source_create_payload when calling createMediaSource'
             );
         }
 
-        $resourcePath = '/media_delivery/media_targets';
+        $resourcePath = '/media_delivery/media_sources';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -388,11 +388,11 @@ class MediaTargetApi
         }
 
         // for model (json/xml)
-        if (isset($media_target_create_payload)) {
+        if (isset($media_source_create_payload)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($media_target_create_payload));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($media_source_create_payload));
             } else {
-                $httpBody = $media_target_create_payload;
+                $httpBody = $media_source_create_payload;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -448,36 +448,36 @@ class MediaTargetApi
     }
 
     /**
-     * Operation deleteMediaTarget
+     * Operation deleteMediaSource
      *
-     * Delete the Media Target
+     * Delete the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
-    public function deleteMediaTarget($id)
+    public function deleteMediaSource($id)
     {
-        list($response) = $this->deleteMediaTargetWithHttpInfo($id);
+        list($response) = $this->deleteMediaSourceWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation deleteMediaTargetWithHttpInfo
+     * Operation deleteMediaSourceWithHttpInfo
      *
-     * Delete the Media Target
+     * Delete the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteMediaTargetWithHttpInfo($id)
+    public function deleteMediaSourceWithHttpInfo($id)
     {
-        $request = $this->deleteMediaTargetRequest($id);
+        $request = $this->deleteMediaSourceRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -516,53 +516,53 @@ class MediaTargetApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MessageResponse';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MessageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -583,7 +583,7 @@ class MediaTargetApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\MessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -591,7 +591,7 @@ class MediaTargetApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -599,7 +599,7 @@ class MediaTargetApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -610,18 +610,18 @@ class MediaTargetApi
     }
 
     /**
-     * Operation deleteMediaTargetAsync
+     * Operation deleteMediaSourceAsync
      *
-     * Delete the Media Target
+     * Delete the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMediaTargetAsync($id)
+    public function deleteMediaSourceAsync($id)
     {
-        return $this->deleteMediaTargetAsyncWithHttpInfo($id)
+        return $this->deleteMediaSourceAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -630,19 +630,19 @@ class MediaTargetApi
     }
 
     /**
-     * Operation deleteMediaTargetAsyncWithHttpInfo
+     * Operation deleteMediaSourceAsyncWithHttpInfo
      *
-     * Delete the Media Target
+     * Delete the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteMediaTargetAsyncWithHttpInfo($id)
+    public function deleteMediaSourceAsyncWithHttpInfo($id)
     {
-        $returnType = '\Cloudinary\Model\MessageResponse';
-        $request = $this->deleteMediaTargetRequest($id);
+        $returnType = '\Cloudinary\MediaDelivery\Model\MessageResponse';
+        $request = $this->deleteMediaSourceRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -681,23 +681,23 @@ class MediaTargetApi
     }
 
     /**
-     * Create request for operation 'deleteMediaTarget'
+     * Create request for operation 'deleteMediaSource'
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteMediaTargetRequest($id)
+    public function deleteMediaSourceRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling deleteMediaTarget'
+                'Missing the required parameter $id when calling deleteMediaSource'
             );
         }
 
-        $resourcePath = '/media_delivery/media_targets/{id}';
+        $resourcePath = '/media_delivery/media_sources/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -782,36 +782,36 @@ class MediaTargetApi
     }
 
     /**
-     * Operation getMediaTarget
+     * Operation getMediaSource
      *
-     * Get the Media Target
+     * Get the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MediaTarget|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MediaSource|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
-    public function getMediaTarget($id)
+    public function getMediaSource($id)
     {
-        list($response) = $this->getMediaTargetWithHttpInfo($id);
+        list($response) = $this->getMediaSourceWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation getMediaTargetWithHttpInfo
+     * Operation getMediaSourceWithHttpInfo
      *
-     * Get the Media Target
+     * Get the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MediaTarget|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MediaSource|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMediaTargetWithHttpInfo($id)
+    public function getMediaSourceWithHttpInfo($id)
     {
-        $request = $this->getMediaTargetRequest($id);
+        $request = $this->getMediaSourceRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -850,53 +850,53 @@ class MediaTargetApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MediaTarget' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MediaSource' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MediaTarget' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MediaSource' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MediaTarget', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MediaSource', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MediaTarget';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -917,7 +917,7 @@ class MediaTargetApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MediaTarget',
+                        '\Cloudinary\MediaDelivery\Model\MediaSource',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -925,7 +925,7 @@ class MediaTargetApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -933,7 +933,7 @@ class MediaTargetApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,18 +944,18 @@ class MediaTargetApi
     }
 
     /**
-     * Operation getMediaTargetAsync
+     * Operation getMediaSourceAsync
      *
-     * Get the Media Target
+     * Get the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMediaTargetAsync($id)
+    public function getMediaSourceAsync($id)
     {
-        return $this->getMediaTargetAsyncWithHttpInfo($id)
+        return $this->getMediaSourceAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -964,19 +964,19 @@ class MediaTargetApi
     }
 
     /**
-     * Operation getMediaTargetAsyncWithHttpInfo
+     * Operation getMediaSourceAsyncWithHttpInfo
      *
-     * Get the Media Target
+     * Get the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMediaTargetAsyncWithHttpInfo($id)
+    public function getMediaSourceAsyncWithHttpInfo($id)
     {
-        $returnType = '\Cloudinary\Model\MediaTarget';
-        $request = $this->getMediaTargetRequest($id);
+        $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource';
+        $request = $this->getMediaSourceRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1015,23 +1015,23 @@ class MediaTargetApi
     }
 
     /**
-     * Create request for operation 'getMediaTarget'
+     * Create request for operation 'getMediaSource'
      *
-     * @param  string $id ID of the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMediaTargetRequest($id)
+    public function getMediaSourceRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getMediaTarget'
+                'Missing the required parameter $id when calling getMediaSource'
             );
         }
 
-        $resourcePath = '/media_delivery/media_targets/{id}';
+        $resourcePath = '/media_delivery/media_sources/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1116,34 +1116,34 @@ class MediaTargetApi
     }
 
     /**
-     * Operation getMediaTargets
+     * Operation getMediaSources
      *
-     * Get the Media Targets
+     * Get the Media Sources
      *
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MediaTarget[]|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MediaSource[]|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
-    public function getMediaTargets()
+    public function getMediaSources()
     {
-        list($response) = $this->getMediaTargetsWithHttpInfo();
+        list($response) = $this->getMediaSourcesWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation getMediaTargetsWithHttpInfo
+     * Operation getMediaSourcesWithHttpInfo
      *
-     * Get the Media Targets
+     * Get the Media Sources
      *
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MediaTarget[]|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MediaSource[]|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMediaTargetsWithHttpInfo()
+    public function getMediaSourcesWithHttpInfo()
     {
-        $request = $this->getMediaTargetsRequest();
+        $request = $this->getMediaSourcesRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -1182,38 +1182,38 @@ class MediaTargetApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MediaTarget[]' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MediaSource[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MediaTarget[]' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MediaSource[]' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MediaTarget[]', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MediaSource[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MediaTarget[]';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1234,7 +1234,7 @@ class MediaTargetApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MediaTarget[]',
+                        '\Cloudinary\MediaDelivery\Model\MediaSource[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1242,7 +1242,7 @@ class MediaTargetApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1253,17 +1253,17 @@ class MediaTargetApi
     }
 
     /**
-     * Operation getMediaTargetsAsync
+     * Operation getMediaSourcesAsync
      *
-     * Get the Media Targets
+     * Get the Media Sources
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMediaTargetsAsync()
+    public function getMediaSourcesAsync()
     {
-        return $this->getMediaTargetsAsyncWithHttpInfo()
+        return $this->getMediaSourcesAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1272,18 +1272,18 @@ class MediaTargetApi
     }
 
     /**
-     * Operation getMediaTargetsAsyncWithHttpInfo
+     * Operation getMediaSourcesAsyncWithHttpInfo
      *
-     * Get the Media Targets
+     * Get the Media Sources
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMediaTargetsAsyncWithHttpInfo()
+    public function getMediaSourcesAsyncWithHttpInfo()
     {
-        $returnType = '\Cloudinary\Model\MediaTarget[]';
-        $request = $this->getMediaTargetsRequest();
+        $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource[]';
+        $request = $this->getMediaSourcesRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1322,16 +1322,16 @@ class MediaTargetApi
     }
 
     /**
-     * Create request for operation 'getMediaTargets'
+     * Create request for operation 'getMediaSources'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getMediaTargetsRequest()
+    public function getMediaSourcesRequest()
     {
 
-        $resourcePath = '/media_delivery/media_targets';
+        $resourcePath = '/media_delivery/media_sources';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1408,38 +1408,38 @@ class MediaTargetApi
     }
 
     /**
-     * Operation updateMediaTarget
+     * Operation updateMediaSource
      *
-     * Update the Media Target
+     * Update the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
-     * @param  \Cloudinary\Model\MediaTargetUpdatePayload $media_target_update_payload Payload to update the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceUpdatePayload $media_source_update_payload Payload to update the Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cloudinary\Model\MediaTarget|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse
+     * @return \Cloudinary\MediaDelivery\Model\MediaSource|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse
      */
-    public function updateMediaTarget($id, $media_target_update_payload)
+    public function updateMediaSource($id, $media_source_update_payload)
     {
-        list($response) = $this->updateMediaTargetWithHttpInfo($id, $media_target_update_payload);
+        list($response) = $this->updateMediaSourceWithHttpInfo($id, $media_source_update_payload);
         return $response;
     }
 
     /**
-     * Operation updateMediaTargetWithHttpInfo
+     * Operation updateMediaSourceWithHttpInfo
      *
-     * Update the Media Target
+     * Update the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
-     * @param  \Cloudinary\Model\MediaTargetUpdatePayload $media_target_update_payload Payload to update the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceUpdatePayload $media_source_update_payload Payload to update the Media Source (required)
      *
-     * @throws \Cloudinary\ApiException on non-2xx response
+     * @throws \Cloudinary\MediaDelivery\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cloudinary\Model\MediaTarget|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse|\Cloudinary\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cloudinary\MediaDelivery\Model\MediaSource|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse|\Cloudinary\MediaDelivery\Model\ErrorMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateMediaTargetWithHttpInfo($id, $media_target_update_payload)
+    public function updateMediaSourceWithHttpInfo($id, $media_source_update_payload)
     {
-        $request = $this->updateMediaTargetRequest($id, $media_target_update_payload);
+        $request = $this->updateMediaSourceRequest($id, $media_source_update_payload);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1478,68 +1478,68 @@ class MediaTargetApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Cloudinary\Model\MediaTarget' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\MediaSource' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\MediaTarget' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\MediaSource' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\MediaTarget', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\MediaSource', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Cloudinary\Model\ErrorMessageResponse' === '\SplFileObject') {
+                    if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Cloudinary\Model\ErrorMessageResponse' !== 'string') {
+                        if ('\Cloudinary\MediaDelivery\Model\ErrorMessageResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cloudinary\Model\ErrorMessageResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cloudinary\Model\MediaTarget';
+            $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1560,7 +1560,7 @@ class MediaTargetApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\MediaTarget',
+                        '\Cloudinary\MediaDelivery\Model\MediaSource',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1568,7 +1568,7 @@ class MediaTargetApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1576,7 +1576,7 @@ class MediaTargetApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1584,7 +1584,7 @@ class MediaTargetApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cloudinary\Model\ErrorMessageResponse',
+                        '\Cloudinary\MediaDelivery\Model\ErrorMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1595,19 +1595,19 @@ class MediaTargetApi
     }
 
     /**
-     * Operation updateMediaTargetAsync
+     * Operation updateMediaSourceAsync
      *
-     * Update the Media Target
+     * Update the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
-     * @param  \Cloudinary\Model\MediaTargetUpdatePayload $media_target_update_payload Payload to update the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceUpdatePayload $media_source_update_payload Payload to update the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateMediaTargetAsync($id, $media_target_update_payload)
+    public function updateMediaSourceAsync($id, $media_source_update_payload)
     {
-        return $this->updateMediaTargetAsyncWithHttpInfo($id, $media_target_update_payload)
+        return $this->updateMediaSourceAsyncWithHttpInfo($id, $media_source_update_payload)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1616,20 +1616,20 @@ class MediaTargetApi
     }
 
     /**
-     * Operation updateMediaTargetAsyncWithHttpInfo
+     * Operation updateMediaSourceAsyncWithHttpInfo
      *
-     * Update the Media Target
+     * Update the Media Source
      *
-     * @param  string $id ID of the Media Target (required)
-     * @param  \Cloudinary\Model\MediaTargetUpdatePayload $media_target_update_payload Payload to update the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceUpdatePayload $media_source_update_payload Payload to update the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateMediaTargetAsyncWithHttpInfo($id, $media_target_update_payload)
+    public function updateMediaSourceAsyncWithHttpInfo($id, $media_source_update_payload)
     {
-        $returnType = '\Cloudinary\Model\MediaTarget';
-        $request = $this->updateMediaTargetRequest($id, $media_target_update_payload);
+        $returnType = '\Cloudinary\MediaDelivery\Model\MediaSource';
+        $request = $this->updateMediaSourceRequest($id, $media_source_update_payload);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1668,30 +1668,30 @@ class MediaTargetApi
     }
 
     /**
-     * Create request for operation 'updateMediaTarget'
+     * Create request for operation 'updateMediaSource'
      *
-     * @param  string $id ID of the Media Target (required)
-     * @param  \Cloudinary\Model\MediaTargetUpdatePayload $media_target_update_payload Payload to update the Media Target (required)
+     * @param  string $id ID of the Media Source (required)
+     * @param  \Cloudinary\MediaDelivery\Model\MediaSourceUpdatePayload $media_source_update_payload Payload to update the Media Source (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateMediaTargetRequest($id, $media_target_update_payload)
+    public function updateMediaSourceRequest($id, $media_source_update_payload)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling updateMediaTarget'
+                'Missing the required parameter $id when calling updateMediaSource'
             );
         }
-        // verify the required parameter 'media_target_update_payload' is set
-        if ($media_target_update_payload === null || (is_array($media_target_update_payload) && count($media_target_update_payload) === 0)) {
+        // verify the required parameter 'media_source_update_payload' is set
+        if ($media_source_update_payload === null || (is_array($media_source_update_payload) && count($media_source_update_payload) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $media_target_update_payload when calling updateMediaTarget'
+                'Missing the required parameter $media_source_update_payload when calling updateMediaSource'
             );
         }
 
-        $resourcePath = '/media_delivery/media_targets/{id}';
+        $resourcePath = '/media_delivery/media_sources/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1722,11 +1722,11 @@ class MediaTargetApi
         }
 
         // for model (json/xml)
-        if (isset($media_target_update_payload)) {
+        if (isset($media_source_update_payload)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($media_target_update_payload));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($media_source_update_payload));
             } else {
-                $httpBody = $media_target_update_payload;
+                $httpBody = $media_source_update_payload;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

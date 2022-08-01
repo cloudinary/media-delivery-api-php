@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Cloudinary\Model;
+namespace Cloudinary\MediaDelivery\Model;
 
 use \ArrayAccess;
-use \Cloudinary\ObjectSerializer;
+use \Cloudinary\MediaDelivery\ObjectSerializer;
 
 /**
  * MediaSource Class Doc Comment
  *
  * @category Class
- * @package  Cloudinary
+ * @package  Cloudinary\MediaDelivery
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MediaSource implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'display_name' => 'string',
         'source_type' => 'string',
-        'config' => '\Cloudinary\Model\MediaSourceConfig',
+        'config' => '\Cloudinary\MediaDelivery\Model\MediaSourceConfig',
         'id' => 'string'
     ];
 
@@ -321,7 +321,7 @@ class MediaSource implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets config
      *
-     * @return \Cloudinary\Model\MediaSourceConfig|null
+     * @return \Cloudinary\MediaDelivery\Model\MediaSourceConfig|null
      */
     public function getConfig()
     {
@@ -331,7 +331,7 @@ class MediaSource implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets config
      *
-     * @param \Cloudinary\Model\MediaSourceConfig|null $config config
+     * @param \Cloudinary\MediaDelivery\Model\MediaSourceConfig|null $config config
      *
      * @return self
      */

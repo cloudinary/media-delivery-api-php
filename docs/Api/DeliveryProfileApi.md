@@ -1,4 +1,4 @@
-# Cloudinary\DeliveryProfileApi
+# Cloudinary\MediaDelivery\DeliveryProfileApi
 
 All URIs are relative to https://api.cloudinary.com/v2/demo.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `createDeliveryProfile()`
 
 ```php
-createDeliveryProfile($delivery_profile_create_payload): \Cloudinary\Model\DeliveryProfile
+createDeliveryProfile($delivery_profile_create_payload): \Cloudinary\MediaDelivery\Model\DeliveryProfile
 ```
 
 Create a new Delivery Profile
@@ -26,21 +26,15 @@ Create a new Delivery Profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\DeliveryProfileApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$delivery_profile_create_payload = new \Cloudinary\Model\DeliveryProfileCreatePayload(); // \Cloudinary\Model\DeliveryProfileCreatePayload | Payload to create Delivery Profile
+$apiInstance = new Cloudinary\MediaDelivery\Api\DeliveryProfileApi(null, $config);
+
+$delivery_profile_create_payload = new \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload(); // \Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload | Payload to create Delivery Profile
 
 try {
     $result = $apiInstance->createDeliveryProfile($delivery_profile_create_payload);
@@ -54,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **delivery_profile_create_payload** | [**\Cloudinary\Model\DeliveryProfileCreatePayload**](../Model/DeliveryProfileCreatePayload.md)| Payload to create Delivery Profile |
+ **delivery_profile_create_payload** | [**\Cloudinary\MediaDelivery\Model\DeliveryProfileCreatePayload**](../Model/DeliveryProfileCreatePayload.md)| Payload to create Delivery Profile |
 
 ### Return type
 
-[**\Cloudinary\Model\DeliveryProfile**](../Model/DeliveryProfile.md)
+[**\Cloudinary\MediaDelivery\Model\DeliveryProfile**](../Model/DeliveryProfile.md)
 
 ### Authorization
 
@@ -88,20 +82,14 @@ Delete the Delivery Profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\DeliveryProfileApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\DeliveryProfileApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Delivery Profile
 
 try {
@@ -137,7 +125,7 @@ void (empty response body)
 ## `getDeliveryProfile()`
 
 ```php
-getDeliveryProfile($id): \Cloudinary\Model\DeliveryProfile
+getDeliveryProfile($id): \Cloudinary\MediaDelivery\Model\DeliveryProfile
 ```
 
 Get the Delivery Profile
@@ -149,20 +137,14 @@ Get the Delivery Profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\DeliveryProfileApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\DeliveryProfileApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Delivery Profile
 
 try {
@@ -181,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Cloudinary\Model\DeliveryProfile**](../Model/DeliveryProfile.md)
+[**\Cloudinary\MediaDelivery\Model\DeliveryProfile**](../Model/DeliveryProfile.md)
 
 ### Authorization
 
@@ -199,7 +181,7 @@ Name | Type | Description  | Notes
 ## `getDeliveryProfiles()`
 
 ```php
-getDeliveryProfiles(): \Cloudinary\Model\DeliveryProfile[]
+getDeliveryProfiles(): \Cloudinary\MediaDelivery\Model\DeliveryProfile[]
 ```
 
 Get the Delivery Profiles
@@ -211,20 +193,14 @@ Get the Delivery Profiles
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\DeliveryProfileApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\DeliveryProfileApi(null, $config);
+
 
 try {
     $result = $apiInstance->getDeliveryProfiles();
@@ -240,7 +216,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Cloudinary\Model\DeliveryProfile[]**](../Model/DeliveryProfile.md)
+[**\Cloudinary\MediaDelivery\Model\DeliveryProfile[]**](../Model/DeliveryProfile.md)
 
 ### Authorization
 
@@ -258,7 +234,7 @@ This endpoint does not need any parameter.
 ## `updateDeliveryProfile()`
 
 ```php
-updateDeliveryProfile($id, $delivery_profile_update_payload): \Cloudinary\Model\DeliveryProfile
+updateDeliveryProfile($id, $delivery_profile_update_payload): \Cloudinary\MediaDelivery\Model\DeliveryProfile
 ```
 
 Update the Delivery Profile
@@ -270,22 +246,16 @@ Update the Delivery Profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure HTTP basic authorization: basicAuth
-$config = Cloudinary\Configuration::getDefaultConfiguration()
+// Configure Cloudinary URL: basicAuth
+$config = Cloudinary\MediaDelivery\Configuration::getDefaultConfiguration()
               ->setCloudinaryUrl('cloudinary://key:secret@cloud_name');
 
-// Configure Bearer (JWT) authorization: bearerAuth
-// $config = Cloudinary\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Cloudinary\Api\DeliveryProfileApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$apiInstance = new Cloudinary\MediaDelivery\Api\DeliveryProfileApi(null, $config);
+
 $id = 1abc2def345g678hij90; // string | ID of the Delivery Profile
-$delivery_profile_update_payload = new \Cloudinary\Model\DeliveryProfileUpdatePayload(); // \Cloudinary\Model\DeliveryProfileUpdatePayload | Payload to update the Delivery Profile
+$delivery_profile_update_payload = new \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload(); // \Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload | Payload to update the Delivery Profile
 
 try {
     $result = $apiInstance->updateDeliveryProfile($id, $delivery_profile_update_payload);
@@ -300,11 +270,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| ID of the Delivery Profile |
- **delivery_profile_update_payload** | [**\Cloudinary\Model\DeliveryProfileUpdatePayload**](../Model/DeliveryProfileUpdatePayload.md)| Payload to update the Delivery Profile |
+ **delivery_profile_update_payload** | [**\Cloudinary\MediaDelivery\Model\DeliveryProfileUpdatePayload**](../Model/DeliveryProfileUpdatePayload.md)| Payload to update the Delivery Profile |
 
 ### Return type
 
-[**\Cloudinary\Model\DeliveryProfile**](../Model/DeliveryProfile.md)
+[**\Cloudinary\MediaDelivery\Model\DeliveryProfile**](../Model/DeliveryProfile.md)
 
 ### Authorization
 
